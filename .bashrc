@@ -1,3 +1,4 @@
+# git
 alias gs="git status"
 alias gps="git push origin"
 alias gpl="git pull --rebase"
@@ -21,33 +22,36 @@ function gg() {
 	gps
 }
 
-alias yo="sudo"
-alias rsa="cat ~/.ssh/id_rsa.pub"
-alias tc="javaws /home/dush1729/Topcoder.jnlp & e"
-alias lb="source ~/.bashrc"
-alias eb="subl ~/.bashrc"
-alias s="subl "
-function sh() {
-	cat $1 | nc termbin.com 9999 | xsel -ib
-}
-
+# web dev
+# delete mongodb database
 alias ddb="mongo --quiet --eval 'db.getMongo().getDBNames().forEach(function(i){db.getSiblingDB(i).dropDatabase()})'"
+# load environment variables and start localhost
 alias nodemon="source app-env;nodemon"
+# share localhost for testing
 alias host="ssh -R 80:localhost:1729 ssh.localhost.run"
 
+# competitive programming
 alias cpc="cp ~/cp/00.cpp"
 q() {
 	g++ -std=c++11 $1 && ./a.out
 }
 alias py="python2"
 alias py3="python"
+alias tc="javaws /home/dush1729/Topcoder.jnlp & e"
 
 alias r="tput reset"
 alias e="exit"
+alias lb="source ~/.bashrc"
+alias eb="subl ~/.bashrc"
+alias s="subl "
+# share file to termibin and copy url to clipboard
+function share() {
+	cat $1 | nc termbin.com 9999 | xsel -ib
+}
 
-c() {
-	cd /home/dush1729/Downloads/Detective\ Conan\ season\ 1\ to\ season\ 22\ +\ season\ 23\(incomplete\)/
-	cd Detective\ Conan\ Season\ $1/
+naruto() {
+	cd ~/Downloads/\[AnimeRG\]\ Naruto\ \(2002\)\ Complete\ Series\ \&\ Movies\ \[DUAL-AUDIO\]\ \[720p\]\ \[x265\]\ \[pseudo\]/
+	cd Season\ $1/
 	vlc ./*$2* & e
 }
 
