@@ -49,10 +49,13 @@ function share() {
 	cat $1 | nc termbin.com 9999 | xsel -ib
 }
 
+alias sound="pulseaudio -k"
 naruto() {
-	cd ~/Downloads/\[AnimeRG\]\ Naruto\ \(2002\)\ Complete\ Series\ \&\ Movies\ \[DUAL-AUDIO\]\ \[720p\]\ \[x265\]\ \[pseudo\]/
-	cd Season\ $1/
-	vlc ./*$2* & e
+	cd ~/Downloads/naruto
+	vlc ./*$1* & e
 }
 
 PS1="\[\033[01;34m\]\w \[\033[00m\]"
+HISTTIMEFORMAT="%d/%m/%y %T "
+PROMPT_COMMAND="printf '\n'"
+export HISTSIZE=999999999999
