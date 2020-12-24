@@ -37,11 +37,14 @@ alias host="ssh -R 80:localhost:1729 ssh.localhost.run"
 # competitive programming
 alias cpc="cp ~/cp/00.cpp"
 q() {
-	g++ -std=c++11 $1 && ./a.out
+	g++ -std=c++17 -I . $1 -o .a.out && ./.a.out
+}
+qq() {
+	g++ -std=c++17 -Wall -Wno-misleading-indentation -fsanitize=address -fsanitize=undefined -I . $1 -o .a.out && ./.a.out
 }
 alias py="python2"
 alias py3="python"
-alias tc="javaws /home/dush1729/Topcoder.jnlp & e"
+alias tc="javaws ~/Topcoder.jnlp & e"
 
 alias r="tput reset"
 alias e="exit"
