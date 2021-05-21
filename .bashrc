@@ -37,10 +37,10 @@ alias host="ssh -R 80:localhost:1729 ssh.localhost.run"
 # competitive programming
 alias cpc="cp ~/cp/00.cpp"
 q() {
-	g++ -std=c++17 -I . $1 -o .a.out && ./.a.out
+	g++ -std=c++17 -DDUSH1729 -I . $1 -o .a.out && ./.a.out
 }
 qq() {
-	g++ -std=c++17 -Wall -Wno-misleading-indentation -fsanitize=address -fsanitize=undefined -I . $1 -o .a.out && ./.a.out
+	g++ -std=c++17 -DDUSH1729 -Wall -Wno-misleading-indentation -fsanitize=address -fsanitize=undefined -I . $1 -o .a.out && ./.a.out
 }
 alias py="python2"
 alias py3="python"
