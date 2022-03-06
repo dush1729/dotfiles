@@ -35,15 +35,16 @@ alias nodemon="source app-env;nodemon"
 alias host="ssh -R 80:localhost:1729 ssh.localhost.run"
 
 # competitive programming
-alias cpc="cp ~/repo/cp/code/00.cpp"
+alias cpc="cp ~/repo/cp/library/templates/00.cpp"
+alias cpl="cp ~/repo/cp/library/templates/leetcode.cpp"
 q() {
-	g++ -std=c++17 -DDUSH1729 -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp && time ~/repo/cp/code/.a.out
+	g++ -std=c++17 -Wshadow -DDUSH1729 -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp && time ~/repo/cp/code/.a.out
 }
 qtc() {
-    g++ -std=c++11 -DDUSH1729 -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp && time ~/repo/cp/code/.a.out
+    g++ -std=c++11 -Wshadow -DDUSH1729 -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp && time ~/repo/cp/code/.a.out
 }
 qq() {
-	g++ -std=c++17 -DDUSH1729 -Wall -Wno-misleading-indentation -fsanitize=address -fsanitize=undefined -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp  && ~/repo/cp/code/.a.out
+	g++ -std=c++17 -Wshadow -DDUSH1729 -Wall -Wno-misleading-indentation -fsanitize=address -fsanitize=undefined -I . $1 -o ~/repo/cp/code/.a.out && cp $1 ~/repo/cp/code/final/code.cpp  && ~/repo/cp/code/.a.out
 }
 alias py="python3"
 alias tc="/opt/OpenWebStart/javaws -jnlp ~/Topcoder.jnlp &! e"
