@@ -50,6 +50,7 @@ alias py="python3"
 alias tc="/opt/OpenWebStart/javaws -jnlp ~/Topcoder.jnlp &! e"
 alias hi="cd ~/repo/cp/code/ && java -jar Hightail-v0.9.7.jar &! e"
 
+alias subl='open -a "Sublime Text"'
 alias r="tput reset"
 alias e="exit"
 alias lb="source ~/.zshrc"
