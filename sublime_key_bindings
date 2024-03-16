@@ -6,5 +6,9 @@
     },
     { 
         "keys": ["ctrl+alt+shift+;"], "command": "terminus_close"
+    },
+    {
+        "keys": ["ctrl+shift+enter"],
+        "command": "build",
     }
 ]
