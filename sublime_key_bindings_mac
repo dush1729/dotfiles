@@ -1,0 +1,14 @@
+[
+    { 
+        "keys": ["command+control+;"], "command": "toggle_terminus_panel", "args": {
+            "cwd": "${file_path:${folder}}"
+        }
+    },
+    { 
+        "keys": ["command+control+shift+;"], "command": "terminus_close"
+    },
+    {
+        "keys": ["command+shift+enter"],
+        "command": "build",
+    }
+]
